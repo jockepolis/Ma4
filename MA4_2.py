@@ -73,4 +73,4 @@ def 47CppNumba():
 	print("Numba", fib_numba(47))
 
 if __name__ == '__main__':
-	47CppNumba()
+	main()
