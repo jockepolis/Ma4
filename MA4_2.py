@@ -3,7 +3,7 @@
 from person import Person
 from numba import njit
 from time import perf_counter as pc
-import matplotlib.pyplot as pl
+import matplotlib.pyplot as plt
 import numpy as np
 
 
@@ -27,7 +27,7 @@ def main():
 		start_py = pc()
 		fib_py(i)
 		end_py = pc()
-		python[j] = start_py - end_py
+		python[j] = end_py - start_py
 
 	plt.clf()
 	plt.plot(range(30,45), NumbaCpp[:, 0], label = "C++")
@@ -52,7 +52,7 @@ def main():
 	plt.plot(range(20,30), PythonNumba[:, 0], label = "Python")
 	plt.plot(range(20,30), PythonNumba[:, 1], label = "Numba")
 	plt.legend()
-	plt.savefig("ComparingPythonNumba.png"
+	plt.savefig("ComparingPythonNumba.png")
  
 def fib_py(f):
 	if f <= 1:
@@ -67,7 +67,7 @@ def fib_numba(f):
 	else:
 		return (fib_numba(f-1) + fib_numba(f-2))
 
-def 47CppNumba():
+def CppNumba():
 	f = person(47)
 	print("C++", f.fib())
 	print("Numba", fib_numba(47))
