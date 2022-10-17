@@ -4,6 +4,7 @@
 
 class Person{
 	public:
+		Person(int);
 		int get();
 		void set(int);
 		int fib();
@@ -43,10 +44,6 @@ extern "C"{
 	void Person_delete(Person* person){
 		if (person){
 			delete person;
-			person = nullptr;
-			}
-		}
-	}			delete person;
 			person = nullptr;
 			}
 		}
